@@ -1,0 +1,402 @@
+:root {
+    --fun-blue-0: aliceblue;
+    --fun-blue-50: rgb(249, 253, 254);
+    --fun-blue-100: rgb(214, 241, 255);
+    --fun-blue-200: rgb(182, 233, 255);
+    --fun-blue-300: rgb(133, 221, 255);
+    --fun-blue-400: rgb(75, 199, 255);
+    --fun-blue-500: rgb(34, 168, 255);
+    --fun-blue-600: rgb(10, 138, 255);
+    --fun-blue-700: rgb(4, 114, 241);
+    --fun-blue-800: rgb(10, 88, 189);
+    --fun-blue-900: rgb(15, 79, 153);
+    --fun-blue-950: rgb(15, 48, 92);
+    --fun-blue-1000: rgb(0, 4, 8);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./files/Manrope/static/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./files/Manrope/static/Manrope-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./files/Manrope/static/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Repite para todas las variantes de la fuente Manrope */
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--fun-blue-50);
+}
+
+
+.principal {
+    width: 920px;
+    margin: 0px auto;
+    height: auto;
+    display: block;
+}
+
+strong {
+    color: var(--fun-blue-950);
+}
+
+h2 {
+    color: var(--fun-blue-950);
+}
+
+.separador-carta {
+    display: block;
+    width: 100%;
+    background-color: var(--fun-blue-0);
+    border-radius: 5px;
+    height: 5px;
+    margin: 10px 0px;
+    overflow: hidden;
+}
+
+.separador-carta::before {
+    display: block;
+    content: '';
+    background-color: var(--fun-blue-600);
+    height: 5px;
+    border-radius: 0px 5px 5px 0px;
+    width: 0%;
+
+
+    animation: separador-carga auto ease forwards;
+    animation-timeline: scroll(root block);
+
+}
+
+@keyframes separador-carga {
+    0% {
+        width: 0%;
+        background-color: var(--fun-blue-100);
+    }
+
+    100% {
+        width: 100%;
+        background-color: var(--fun-blue-900);
+    }
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    margin: 20px 0px 50px;
+
+    & .cabecera {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    & img {
+        display: inline;
+        margin: 5px 30px 0px 0px;
+        width: 60px;
+        height: 60px;
+    }
+
+    & h1 {
+        display: inline;
+        font-size: 45px;
+        color: var(--fun-blue-950);
+    }
+}
+
+.contenido-general {
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px 0px;
+
+    view-timeline-name: --bloque;
+    view-timeline-axis: block;
+
+    animation-timeline: --bloque;
+    animation-name: aparecer;
+
+    animation-range: entry 10% cover 30%;
+    ;
+    animation-fill-mode: both;
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.introduccion {
+    & .titulo {
+        display: inline-block;
+        width: 30%;
+        color: var(--fun-blue-900);
+        background-color: var(--fun-blue-0);
+        border-radius: 10px 0px;
+        padding: 120px 0px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    & .card-contenido {
+        float: right;
+        height: 272.89px;
+        width: 60%;
+        color: var(--fun-blue-1000);
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+
+        & .texto {
+            width: 75%;
+            margin-left: 17%;
+            margin-top: -71%;
+            font-weight: normal;
+            position: relative;
+            z-index: 2;
+            line-height: 30px;
+            font-size: 18px;
+        }
+
+        & .animacion-molecular {
+            width: 702px;
+            height: 467px;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+        }
+    }
+}
+
+.diagrama {
+    & .titulo {
+        display: inline-block;
+        width: 100%;
+        color: var(--fun-blue-900);
+        background-color: var(--fun-blue-0);
+        border-radius: 5px 5px 0px 0px;
+        padding: 10px 0px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    & .card-contenido {
+        width: 100%;
+        background-color: var(--fun-blue-0);
+        padding: 20px 0px;
+    }
+
+    & .teoria-resumen,
+    .tabla-vsepr {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    & .tabla-vsepr {
+
+        th {
+            padding: 10px;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        & th {
+            background-color: var(--fun-blue-900);
+            color: aliceblue;
+            border-radius: 5px;
+        }
+
+        & img {
+            width: 30px;
+            height: auto;
+        }
+
+        & .figura-v {
+            cursor: pointer;
+            transition: .3s background-color ease;
+        }
+
+        & .figura-v:hover {
+            background-color: var(--fun-blue-900);
+        }
+
+        & .figura-v img {
+            display: block;
+            margin: 0px auto;
+        }
+
+
+        & tr {
+            background-color: var(--fun-blue-50);
+        }
+
+        & th:nth-child(1) {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+
+        & th:nth-child(2) {
+            border-radius: 0px;
+        }
+
+        & th:nth-child(3) {
+            border-radius: 0px;
+        }
+
+        & th:nth-child(4) {
+            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        & tr td:nth-child(1) {
+            text-align: center;
+        }
+
+        & tr td {
+            padding: 10px 10px;
+        }
+
+
+
+    }
+
+}
+
+.geometria {
+    & .titulo {
+        display: block;
+        width: 100%;
+        margin-bottom: 100px;
+
+
+    }
+
+    & .card-contenido {
+        display: block;
+        margin: 0px auto;
+        width: 100%;
+        min-height: 350px;
+        background-color: var(--fun-blue-0);
+        border-radius: 0px 0px 10px 10px;
+
+
+        & .lista-contenedor {
+            position: absolute;
+            display: block;
+            width: 100%;
+            margin-top: -59px;
+
+            & .lista {
+                cursor: pointer;
+                color: var(--fun-blue-900);
+                font-weight: bold;
+                display: inline-block;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                width: 40px;
+                height: 30px;
+                padding: 15px 35px;
+                background-color: var(--fun-blue-0);
+                transition: background-color linear .3s, color linear .2s;
+            }
+
+            & .lista:hover {
+                background-color: var(--fun-blue-900);
+                color: var(--fun-blue-0);
+            }
+
+            & .seleccionado {
+                background-color: var(--fun-blue-900);
+                color: var(--fun-blue-0);
+            }
+        }
+
+
+    }
+}
+
+
+.listado {
+    margin-bottom: 50px;
+    & .titulo {
+        margin-bottom: 30px;
+    }
+
+    & .card-contenido {
+        display: block;
+        width: 90%;
+        margin: 0px auto;
+
+        & p {
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+
+        & li {
+            list-style: none;
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+
+    }
+
+}
+
+
+footer {
+    background-color: var(--fun-blue-0);
+    color: var(--fun-blue-950);
+    padding: 20px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: var(--fun-blue-950);
+}
+
+.footer-content ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.footer-content li {
+    border-bottom: 1px solid var(--fun-blue-0);
+    padding: 5px 0; 
+}
+
+.footer-credits p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #aaa;
+}

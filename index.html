@@ -11,6 +11,90 @@
 
 <body>
     <main class="principal">
+
+        <!-- Modales -->
+        <div id="modalBackdrop" class="modal-backdrop"></div>
+
+
+        <div id="modalLineal" class="modal">
+            <p>Geometría Lineal</p>
+            <div class="contenido">
+                <div class="card">
+                    <h2>AX<span class="pequenio">2</span></h2>
+                </div>
+                <div class="card">
+                    <h2>AXE</h2>
+                </div>
+            </div>
+            <button onclick="closeModal('modalLineal')">Cerrar</button>
+        </div>
+
+        <div id="modalTrigonal" class="modal">
+            <p>Geometría Trigonal</p>
+            <div class="contenido">
+                <div class="card">
+                    <h2>AX<span class="pequenio">3</span></h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">2</span>E</h2>
+                </div>
+            </div>
+            <button onclick="closeModal('modalTrigonal')">Cerrar</button>
+        </div>
+
+        <div id="modalTetraedrica" class="modal">
+            <p>Geometría Tetraédrica</p>
+            <div class="contenido">
+                <div class="card">
+                    <h2>AX<span class="pequenio">4</span></h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">3</span>E</h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">2</span>E<span class="pequenio">2</span</h2>
+                </div>
+            </div>
+            <button onclick="closeModal('modalTetraedrica')">Cerrar</button>
+        </div>
+
+        <div id="modalBitrigonal" class="modal">
+            <p>Geometría Trigonal bipiramidal</p>
+            <div class="contenido">
+                <div class="card">
+                    <h2>AX<span class="pequenio">5</span</h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">4</span>E</h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">3</span>E<span class="pequenio">2</span</h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">2</span>E<span class="pequenio">3</span</h2>
+                    </h2>
+                </div>
+            </div>
+            <button onclick="closeModal('modalBitrigonal')">Cerrar</button>
+        </div>
+
+        <div id="modalOctaedrica" class="modal">
+            <p>Geometría Octaédrica</p>
+            <div class="contenido">
+                <div class="card">
+                    <h2>AX<span class="pequenio">6</span></h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">5</span>E</h2>
+                </div>
+                <div class="card">
+                    <h2>AX<span class="pequenio">4</span>E<span class="pequenio">2</span< /h2>
+                </div>
+            </div>
+            <button onclick="closeModal('modalOctaedrica')">Cerrar</button>
+        </div>
+
+
         <!-- cabezera de la pagina donde se incluye el logo de y el nombre de la pagina -->
 
         <header>
@@ -164,7 +248,7 @@
         </article>
 
         <div class="separador-carta"></div>
-        
+
         <footer>
             <div class="footer-content">
                 <h3>Bibliografía</h3>
@@ -182,7 +266,7 @@
         </footer>
 
 
-        <script src="https://3Dmol.org/build/3Dmol-min.js" onload="initViewer()"></script>     
+        <script src="https://3Dmol.org/build/3Dmol-min.js" onload=""></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
         <script src="./code.js"></script>

@@ -403,6 +403,16 @@ header {
 
 
     }
+
+    & .modelo{
+        display: block;
+        position: relative;
+        width: 880px;
+        height: 310px;
+        padding: 20px;
+        margin: 0px auto;
+        background-color: var(--fun-blue-0);
+    }
 }
 
 

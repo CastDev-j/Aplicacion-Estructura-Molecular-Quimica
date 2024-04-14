@@ -64,6 +64,62 @@ escribirYBorrarFrases(0);
 
 
 
+
+const modalBackdrop = document.createElement('div');
+modalBackdrop.className = 'modal-backdrop';
+document.body.appendChild(modalBackdrop);
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.add('open');
+  modalBackdrop.classList.add('open');
+}
+
+function closeModal() {
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.classList.remove('open');
+  });
+  modalBackdrop.classList.remove('open');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.querySelector('.lineal.figura-v').addEventListener('click', function() {
+    openModal('modalLineal');
+  });
+
+  document.querySelector('.trigonal.figura-v').addEventListener('click', function() {
+    openModal('modalTrigonal');
+  });
+
+  document.querySelector('.tetraedrica.figura-v').addEventListener('click', function() {
+    openModal('modalTetraedrica');
+  });
+
+  document.querySelector('.bitrigonal.figura-v').addEventListener('click', function() {
+    openModal('modalBitrigonal');
+  });
+
+  document.querySelector('.octaedrica.figura-v').addEventListener('click', function() {
+    openModal('modalOctaedrica');
+  });
+
+
+  modalBackdrop.addEventListener('click', closeModal);
+
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
+});
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const listaElementos = document.querySelectorAll('.lista');
   const element = document.querySelector('#contenedor');
@@ -350,4 +406,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-

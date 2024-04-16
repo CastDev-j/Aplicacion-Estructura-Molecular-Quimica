@@ -566,6 +566,12 @@ footer {
             & .pequenio{
                 font-size: 14px;
             }
+                        & img{
+                display: block;
+                margin: 10% auto;
+                width: 70%;
+                filter: invert(100%);
+            }
         }
     }
 
